@@ -721,7 +721,7 @@ static u32_t get_Microchip_phy_speed(XEmacPs *xemacpsp, u32_t phy_addr)
 	}
 	xil_printf("autonegotiation complete \r\n");
 
-  // Read from Microchip page 0, register 0xA (PHY Control)
+  // Read from Microchip page 0, register 0x1F (PHY Control)
   // http://ww1.microchip.com/downloads/en/DeviceDoc/00002117F.pdf
 	XEmacPs_PhyRead(xemacpsp, phy_addr,0x1F,&status_speed);
 	if (status_speed & 0x040)

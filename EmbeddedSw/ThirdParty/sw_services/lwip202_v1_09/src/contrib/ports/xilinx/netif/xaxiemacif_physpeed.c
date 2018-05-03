@@ -644,7 +644,7 @@ unsigned int get_phy_speed_Microchip(XAxiEthernet *xaxiemacp, u32 phy_addr)
 
 	xil_printf("autonegotiation complete \r\n");
 
-  // Read from Microchip page 0, register 0xA (PHY Control)
+  // Read from Microchip page 0, register 0x1F (PHY Control)
   // http://ww1.microchip.com/downloads/en/DeviceDoc/00002117F.pdf
 	XAxiEthernet_PhyRead(xaxiemacp, phy_addr,0x1F,&status);
 	if (status & 0x040)
